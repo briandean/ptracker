@@ -1,0 +1,6 @@
+Run the createptracker.sql script against a db
+Edit the db connection string in the web.conf file.
+Edit all the files in the setup directory to the same connection string. I was too lazy at the time to reference the main connection string from the web.conf file.
+That's pretty much it I guess.
+-Brian Dean
+brian@briandean.net

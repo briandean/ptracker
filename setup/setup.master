@@ -1,0 +1,43 @@
+<%@ Master Language="C#" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>P:Tracker - Piedmont Health Group</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table width="100%" cellpadding="0" cellspacing="0" >
+                <tr>
+                    <td class="head">
+                        <asp:Image ID="Image1" runat="server" SkinID="logo" />
+                    </td>
+                </tr>
+            </table>
+            <table cellpadding="5px" cellspacing="0" width="100%" >
+                <tr>
+                    <td class="menu"> &nbsp;<asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1"
+                            ImageSet="Arrows" ShowLines="True">
+                            <ParentNodeStyle Font-Bold="False" />
+                            <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                            <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px"
+                                VerticalPadding="0px" />
+                            <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+                                NodeSpacing="0px" VerticalPadding="0px" />
+                        </asp:TreeView>
+                        &nbsp;
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                    
+                    </td >
+                    <td valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

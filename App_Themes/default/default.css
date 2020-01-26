@@ -1,0 +1,51 @@
+﻿body
+{
+    font-family: Arial;
+    font-size: medium;
+}
+
+td.head
+{
+    border-bottom: solid;
+    border-bottom-color: Black;
+    border-bottom-width: 1px;
+    
+}
+
+td.menu
+{
+    width: 50px;
+    vertical-align: top;
+    position: static;
+}
+
+h1
+{
+    font-size: x-large;
+}
+
+td.clock
+{
+    font-weight: bold;
+    border-bottom: solid;
+    border-bottom-color: Black;
+    border-bottom-width: 1px;
+    text-align: right;
+}
+
+a
+{
+    text-decoration: none;
+   
+}
+
+a.tabs
+{
+ background-color: green;
+ font-size: large;
+ color: white;
+ padding: 10px;
+ padding-bottom: 1px;
+ padding-top: 1px;
+ 
+}

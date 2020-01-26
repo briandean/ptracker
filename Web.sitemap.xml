@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="./setup/default.aspx" title="P:Tracker Setup"  description="P:Tracker Setup">
+        <siteMapNode url="~/setup/offices.aspx" title="Offices"  description="Offices" />
+        <siteMapNode url="./setup/allrooms.aspx" title="Rooms"  description="Rooms" />
+        <siteMapNode url="./setup/alldoctors.aspx" title="Doctors" description="Doctors" />
+    </siteMapNode>
+</siteMap>

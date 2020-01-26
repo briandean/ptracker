@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="ptrackerConnectionString">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>c2f485c6-1f50-4da0-bb87-7d51ea26a316</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="message">
+        <Left>0.75in</Left>
+        <Top>1.25in</Top>
+        <rd:DefaultName>message</rd:DefaultName>
+        <ZIndex>4</ZIndex>
+        <Width>4.875in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.625in</Height>
+        <Value>=First(Fields!message.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <Left>0.75in</Left>
+        <Top>0.125in</Top>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <ZIndex>3</ZIndex>
+        <Width>1.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Piedmont Health Group</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <Left>0.75in</Left>
+        <Top>0.625in</Top>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <ZIndex>2</ZIndex>
+        <Width>0.5in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Name:</Value>
+      </Textbox>
+      <Textbox Name="last_name">
+        <Left>2.375in</Left>
+        <Top>0.625in</Top>
+        <rd:DefaultName>last_name</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>1in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!last_name.Value)</Value>
+      </Textbox>
+      <Textbox Name="first_name">
+        <Left>1.25in</Left>
+        <Top>0.625in</Top>
+        <rd:DefaultName>first_name</rd:DefaultName>
+        <Width>1in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!first_name.Value)</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>2in</Height>
+  </Body>
+  <rd:ReportID>848f56d8-9233-423e-8a16-b32abab555d7</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="ptracker_patients">
+      <rd:DataSetInfo>
+        <rd:TableAdapterGetDataMethod>GetDataAllPatients</rd:TableAdapterGetDataMethod>
+        <rd:DataSetName>ptracker</rd:DataSetName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>patientsTableAdapter</rd:TableAdapterName>
+        <rd:TableName>patients</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT     id, status, first_name, last_name, checked_in, checked_out, visiting, room, office, time
+FROM         patients</CommandText>
+        <DataSourceName>ptrackerConnectionString</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>id</DataField>
+        </Field>
+        <Field Name="status">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>status</DataField>
+        </Field>
+        <Field Name="first_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>first_name</DataField>
+        </Field>
+        <Field Name="last_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>last_name</DataField>
+        </Field>
+        <Field Name="checked_in">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>checked_in</DataField>
+        </Field>
+        <Field Name="checked_out">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>checked_out</DataField>
+        </Field>
+        <Field Name="visiting">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>visiting</DataField>
+        </Field>
+        <Field Name="room">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>room</DataField>
+        </Field>
+        <Field Name="office">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>office</DataField>
+        </Field>
+        <Field Name="time">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>time</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="ptracker_dictations">
+      <rd:DataSetInfo>
+        <rd:TableAdapterGetDataMethod>GetAllDictations</rd:TableAdapterGetDataMethod>
+        <rd:DataSetName>ptracker</rd:DataSetName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>dictationsTableAdapter</rd:TableAdapterName>
+        <rd:TableName>dictations</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT     id, pat_id, message, doctor, date_dictated, appt_id
+FROM         dictations</CommandText>
+        <DataSourceName>ptrackerConnectionString</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>id</DataField>
+        </Field>
+        <Field Name="pat_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>pat_id</DataField>
+        </Field>
+        <Field Name="message">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>message</DataField>
+        </Field>
+        <Field Name="doctor">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>doctor</DataField>
+        </Field>
+        <Field Name="date_dictated">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>date_dictated</DataField>
+        </Field>
+        <Field Name="appt_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>appt_id</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>6.5in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

@@ -1,0 +1,31 @@
+<%@ Master Language="C#" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>P:Tracker - Piedmont Health Group</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="head" style="height: 30px">
+                        <asp:Image ID="Image1" runat="server" SkinID="logo" />&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <a href="../dictations/Default.aspx" class="tabs">Appointments to Dictate</a>&nbsp<a href="../dictations/macros.aspx" class="tabs">Macros</a>&nbsp<a href="../dictations/dictations.aspx" class="tabs">Dictations</a>
+                        </td>
+                                <td class="clock">
+                                    <a href="../Default.aspx">Patients</a>
+                                    <br />
+                                    <a href="../dictations/Default.aspx">Dictations</a>
+                               </td>
+                </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
